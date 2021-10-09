@@ -1,6 +1,7 @@
 import AboutMe from './About-me';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
+import Resume from './Resume';
 
 const Navigation = ({ section }) => {
 	if (section === 'About Me') {
@@ -13,6 +14,10 @@ const Navigation = ({ section }) => {
 
 	if (section === 'Contact') {
 		return <Contact />;
+	}
+
+	if (section === 'Resume') {
+		return <Resume />;
 	}
 };
 

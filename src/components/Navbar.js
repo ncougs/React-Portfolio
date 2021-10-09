@@ -4,7 +4,14 @@ const NavBar = ({ selectSection }) => {
 	return (
 		<Navbar bg='light' variant='light'>
 			<Container>
-				<Navbar.Brand href='#home'>React Portfolio</Navbar.Brand>
+				<Navbar.Brand
+					onClick={() => {
+						selectSection('About Me');
+					}}
+					href='#top'
+				>
+					React Portfolio
+				</Navbar.Brand>
 				<Nav className='me-auto'>
 					<Nav.Link
 						onClick={() => {
@@ -27,7 +34,13 @@ const NavBar = ({ selectSection }) => {
 					>
 						Contact
 					</Nav.Link>
-					<Nav.Link href='#pricing'>Resume</Nav.Link>
+					<Nav.Link
+						onClick={() => {
+							selectSection('Resume');
+						}}
+					>
+						Resume
+					</Nav.Link>
 				</Nav>
 			</Container>
 		</Navbar>
