@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 
 import NavBar from './components/Navbar';
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 const App = () => {
 	const [section, renderSection] = useState('About Me');
@@ -12,6 +13,7 @@ const App = () => {
 			<Container>
 				<Navigation section={section} />
 			</Container>
+			<Footer />
 		</>
 	);
 };
