@@ -20,7 +20,13 @@ const NavBar = ({ selectSection }) => {
 					>
 						Portfolio
 					</Nav.Link>
-					<Nav.Link href='#pricing'>Contact</Nav.Link>
+					<Nav.Link
+						onClick={() => {
+							selectSection('Contact');
+						}}
+					>
+						Contact
+					</Nav.Link>
 					<Nav.Link href='#pricing'>Resume</Nav.Link>
 				</Nav>
 			</Container>

@@ -1,5 +1,6 @@
 import AboutMe from './About-me';
 import Portfolio from './Portfolio';
+import Contact from './Contact';
 
 const Navigation = ({ section }) => {
 	if (section === 'About Me') {
@@ -8,6 +9,10 @@ const Navigation = ({ section }) => {
 
 	if (section === 'Portfolio') {
 		return <Portfolio />;
+	}
+
+	if (section === 'Contact') {
+		return <Contact />;
 	}
 };
 
