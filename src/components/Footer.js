@@ -7,7 +7,7 @@ const Footer = () => {
 	};
 
 	return (
-		<Navbar fixed='bottom' bg='light' variant='light'>
+		<Navbar sticky='bottom' bg='light' variant='light'>
 			<Container>
 				<Nav className='m-auto'>
 					<Nav.Link href='https://github.com/' target='_blank'>

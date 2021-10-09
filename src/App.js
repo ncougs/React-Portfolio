@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import NavBar from './components/Navbar';
 import Navigation from './components/Navigation';
@@ -10,8 +10,12 @@ const App = () => {
 	return (
 		<>
 			<NavBar selectSection={renderSection} />
-			<Container>
-				<Navigation section={section} />
+			<Container className='flex-grow-1 d-flex flex-column'>
+				<Row className='my-auto'>
+					<Col>
+						<Navigation section={section} />
+					</Col>
+				</Row>
 			</Container>
 			<Footer />
 		</>
