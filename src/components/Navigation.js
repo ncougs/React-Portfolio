@@ -4,21 +4,14 @@ import Contact from './Contact';
 import Resume from './Resume';
 
 const Navigation = ({ section }) => {
-	if (section === 'About Me') {
-		return <AboutMe />;
-	}
-
-	if (section === 'Portfolio') {
-		return <Portfolio />;
-	}
-
-	if (section === 'Contact') {
-		return <Contact />;
-	}
-
-	if (section === 'Resume') {
-		return <Resume />;
-	}
+	return (
+		<>
+			{section.includes('About Me') && <AboutMe />}
+			{section.includes('Portfolio') && <Portfolio />}
+			{section.includes('Contact') && <Contact />}
+			{section.includes('Resume') && <Resume />}
+		</>
+	);
 };
 
 export default Navigation;
