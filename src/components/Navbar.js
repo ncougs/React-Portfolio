@@ -1,14 +1,24 @@
 import { Navbar, Container, Nav } from 'react-bootstrap';
 
 const NavBar = ({ selectSection }) => {
+	const styles = {
+		background: {
+			background: '#2c2c2c',
+		},
+		color: {
+			color: '#ce9e62',
+		},
+	};
+
 	return (
-		<Navbar bg='light' variant='light' expand='lg'>
+		<Navbar variant='light' expand='lg' style={styles.background}>
 			<Container>
 				<Navbar.Brand
 					onClick={() => {
 						selectSection('About Me');
 					}}
 					href='#top'
+					style={styles.color}
 				>
 					React Portfolio
 				</Navbar.Brand>
@@ -19,6 +29,7 @@ const NavBar = ({ selectSection }) => {
 							onClick={() => {
 								selectSection('About Me');
 							}}
+							style={styles.color}
 						>
 							About Me
 						</Nav.Link>
@@ -26,6 +37,7 @@ const NavBar = ({ selectSection }) => {
 							onClick={() => {
 								selectSection('Portfolio');
 							}}
+							style={styles.color}
 						>
 							Portfolio
 						</Nav.Link>
@@ -33,6 +45,7 @@ const NavBar = ({ selectSection }) => {
 							onClick={() => {
 								selectSection('Contact');
 							}}
+							style={styles.color}
 						>
 							Contact
 						</Nav.Link>
@@ -40,6 +53,7 @@ const NavBar = ({ selectSection }) => {
 							onClick={() => {
 								selectSection('Resume');
 							}}
+							style={styles.color}
 						>
 							Resume
 						</Nav.Link>

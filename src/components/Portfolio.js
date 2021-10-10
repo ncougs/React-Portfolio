@@ -36,12 +36,19 @@ const Portfolio = () => {
 		},
 	];
 
+	const styles = {
+		heading: {
+			fontSize: '4rem',
+			textAlign: 'center',
+		},
+	};
+
 	return (
 		<>
-			<h2>PortFolio</h2>
+			<h2 style={styles.heading}>PortFolio</h2>
 			<Row>
-				{portfolioWork.map((item) => (
-					<Col lg={4}>
+				{portfolioWork.map((item, index) => (
+					<Col lg={4} key={index}>
 						<PortfolioCard
 							title={item.title}
 							img={item.img}

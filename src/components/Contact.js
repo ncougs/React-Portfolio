@@ -20,9 +20,21 @@ const Contact = () => {
 		setMessage('');
 	};
 
+	const styles = {
+		border: {
+			borderColor: '#ce9e62',
+		},
+		buttonColour: {
+			background: '#ce9e62',
+		},
+		heading: {
+			fontSize: '5rem',
+		},
+	};
+
 	return (
 		<>
-			<h2>Contact Me</h2>
+			<h2 style={styles.heading}>Contact Me</h2>
 			<Form onSubmit={handleSubmit}>
 				<Form.Group className='mb-3' controlId='name'>
 					<Form.Label>Name</Form.Label>
@@ -60,12 +72,19 @@ const Contact = () => {
 						}}
 					/>
 				</Form.Group>
-				<Button type='submit' variant='success'>
+				<Button
+					type='submit'
+					variant='success'
+					style={{ ...styles.buttonColour, ...styles.border }}
+				>
 					Send Message
 				</Button>
 			</Form>
 			{messageSent && (
-				<Alert variant='success' className='my-3'>
+				<Alert
+					className='my-3 text-white'
+					style={{ ...styles.buttonColour, ...styles.border }}
+				>
 					Message Sent!
 				</Alert>
 			)}

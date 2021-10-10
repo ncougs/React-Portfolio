@@ -1,7 +1,12 @@
 const Resume = () => {
+	const styles = {
+		heading: {
+			fontSize: '7rem',
+		},
+	};
 	return (
 		<>
-			<h2>Resume</h2>
+			<h2 style={styles.heading}>Resume</h2>
 			<p>Here is my resume!</p>
 		</>
 	);
