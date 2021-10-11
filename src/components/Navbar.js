@@ -20,7 +20,7 @@ const NavBar = ({ selectSection }) => {
 					href='#top'
 					style={styles.color}
 				>
-					React Portfolio
+					Nicholas Cougan
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls='basic-navbar-nav' />
 				<Navbar.Collapse id='basic-navbar-nav' className='flex-grow-0'>
@@ -54,6 +54,8 @@ const NavBar = ({ selectSection }) => {
 								selectSection('Resume');
 							}}
 							style={styles.color}
+							href='https://drive.google.com/file/d/15Nng6wCLEpyk1KAn6byQsgDYE3arAsLg/view?usp=sharing'
+							target='_blank'
 						>
 							Resume
 						</Nav.Link>

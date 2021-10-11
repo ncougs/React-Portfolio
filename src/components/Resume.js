@@ -7,7 +7,7 @@ const Resume = () => {
 	return (
 		<>
 			<h2 style={styles.heading}>Resume</h2>
-			<p>Here is my resume!</p>
+			<p>Thank you for downloading!</p>
 		</>
 	);
 };

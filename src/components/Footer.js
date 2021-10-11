@@ -18,21 +18,18 @@ const Footer = () => {
 		<Navbar sticky='bottom' variant='light' style={styles.background}>
 			<Container>
 				<Nav className='m-auto'>
-					<Nav.Link href='https://github.com/' target='_blank'>
+					<Nav.Link href='https://github.com/ncougs' target='_blank'>
 						<i
 							class='bi-github'
 							style={{ ...styles.iconStyle, ...styles.color }}
 						></i>
 					</Nav.Link>
-					<Nav.Link href='https://www.linkedin.com/' target='_blank'>
+					<Nav.Link
+						href='https://www.linkedin.com/in/nicholas-cougan/'
+						target='_blank'
+					>
 						<i
 							class='bi bi-linkedin'
-							style={{ ...styles.iconStyle, ...styles.color }}
-						></i>
-					</Nav.Link>
-					<Nav.Link href='https://www.twitter.com/' target='_blank'>
-						<i
-							class='bi bi-twitter'
 							style={{ ...styles.iconStyle, ...styles.color }}
 						></i>
 					</Nav.Link>

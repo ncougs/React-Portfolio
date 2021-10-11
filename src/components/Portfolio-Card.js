@@ -1,6 +1,6 @@
-import { Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
-const PortfolioCard = ({ img, title, description }) => {
+const PortfolioCard = ({ img, title, description, url }) => {
 	const styles = {
 		background: {
 			background: '#2c2c2c',
@@ -11,8 +11,9 @@ const PortfolioCard = ({ img, title, description }) => {
 		border: {
 			borderColor: '#ce9e62',
 		},
-		buttonColour: {
-			background: '#ce9e62',
+		text: {
+			textDecoration: 'none',
+			color: '#ce9e62',
 		},
 	};
 	return (
@@ -20,14 +21,17 @@ const PortfolioCard = ({ img, title, description }) => {
 			style={{ ...styles.background, ...styles.width, ...styles.border }}
 			className='mx-auto my-4'
 		>
-			<Card.Img variant='top' src={img} />
-			<Card.Body>
-				<Card.Title>{title}</Card.Title>
-				<Card.Text>{description}</Card.Text>
-				<Button style={{ ...styles.buttonColour, ...styles.border }}>
-					Go somewhere
-				</Button>
-			</Card.Body>
+			<a href={url} target='_blank' style={styles.text}>
+				<Card.Img
+					variant='top'
+					src={img}
+					alt={`title image of ${description}`}
+				/>
+				<Card.Body>
+					<Card.Title>{title}</Card.Title>
+					<Card.Text>{description}</Card.Text>
+				</Card.Body>
+			</a>
 		</Card>
 	);
 };
