@@ -54,7 +54,7 @@ const NavBar = ({ selectSection }) => {
 								selectSection('Resume');
 							}}
 							style={styles.color}
-							href='https://drive.google.com/file/d/15Nng6wCLEpyk1KAn6byQsgDYE3arAsLg/view?usp=sharing'
+							href='https://drive.google.com/file/d/15N3wlw1dxMHrappHGQzOvOTyRRSfTQNh/view?usp=sharing'
 							target='_blank'
 						>
 							Resume
