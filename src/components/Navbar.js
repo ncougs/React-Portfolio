@@ -3,10 +3,10 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 const NavBar = ({ selectSection }) => {
 	const styles = {
 		background: {
-			background: '#2c2c2c',
+			background: '#5e7e7c',
 		},
 		color: {
-			color: '#ce9e62',
+			color: '#fff',
 		},
 	};
 

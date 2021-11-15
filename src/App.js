@@ -1,6 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import WebFont from 'webfontloader';
 
 import NavBar from './components/Navbar';
 import Navigation from './components/Navigation';
@@ -11,37 +10,31 @@ const App = () => {
 
 	const styles = {
 		background: {
-			background: '#2c2c2c',
+			background: '#5e7e7c',
 		},
 		color: {
-			color: '#ce9e62',
+			color: '#fff',
 		},
 		font: {
-			fontFamily: 'Space Mono',
+			fontFamily: `'Oswald', sans-serif`,
+			lineHeight: '2rem',
 		},
 	};
-
-	useEffect(() => {
-		WebFont.load({
-			google: {
-				families: ['sans-serif', 'Space Mono'],
-			},
-		});
-	}, []);
 
 	return (
 		<>
 			<div
 				style={{ ...styles.background, ...styles.font }}
-				class='d-flex flex-column min-vh-100'
+				className='d-flex flex-column min-vh-100'
 			>
 				<NavBar selectSection={renderSection} />
 				<Container
-					className='flex-grow-1 d-flex flex-column'
+					fluid
+					className='flex-grow-1 d-flex flex-column m-0 p-0'
 					style={{ ...styles.background, ...styles.color }}
 				>
-					<Row className='my-auto'>
-						<Col>
+					<Row className='my-auto m-0 p-0'>
+						<Col className='p-0'>
 							<Navigation section={section} />
 						</Col>
 					</Row>

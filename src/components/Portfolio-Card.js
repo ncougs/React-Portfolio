@@ -3,36 +3,47 @@ import { Card } from 'react-bootstrap';
 const PortfolioCard = ({ img, title, description, url }) => {
 	const styles = {
 		background: {
-			background: '#2c2c2c',
+			background: '#5e7e7c',
 		},
 		width: {
 			width: '18rem',
 		},
 		border: {
-			borderColor: '#ce9e62',
+			borderColor: '#e8f2f1',
 		},
 		text: {
 			textDecoration: 'none',
-			color: '#ce9e62',
+			color: '#e8f2f1',
+		},
+		image: {
+			width: '100%',
+			height: '18rem',
+			objectFit: 'cover',
 		},
 	};
 	return (
-		<Card
-			style={{ ...styles.background, ...styles.width, ...styles.border }}
-			className='mx-auto my-4'
-		>
-			<a href={url} target='_blank' style={styles.text}>
-				<Card.Img
-					variant='top'
-					src={img}
-					alt={`title image of ${description}`}
-				/>
-				<Card.Body>
-					<Card.Title>{title}</Card.Title>
-					<Card.Text>{description}</Card.Text>
-				</Card.Body>
+		<>
+			<a
+				href={url}
+				target='_blank'
+				style={styles.text}
+				className='mx-auto my-4 d-flex'
+			>
+				<Card
+					style={{ ...styles.background, ...styles.width, ...styles.border }}
+				>
+					<Card.Body>
+						<Card.Title>{title}</Card.Title>
+						<Card.Text>{description}</Card.Text>
+					</Card.Body>
+					<Card.Img
+						src={img}
+						alt={`title image of ${description}`}
+						style={styles.image}
+					/>
+				</Card>
 			</a>
-		</Card>
+		</>
 	);
 };
 

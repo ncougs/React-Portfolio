@@ -4,10 +4,10 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 const Footer = () => {
 	const styles = {
 		background: {
-			background: '#2c2c2c',
+			background: '#5e7e7c',
 		},
 		color: {
-			color: '#ce9e62',
+			color: '#fff',
 		},
 		iconStyle: {
 			fontSize: '1.5rem',
@@ -20,7 +20,7 @@ const Footer = () => {
 				<Nav className='m-auto'>
 					<Nav.Link href='https://github.com/ncougs' target='_blank'>
 						<i
-							class='bi-github'
+							className='bi-github'
 							style={{ ...styles.iconStyle, ...styles.color }}
 						></i>
 					</Nav.Link>
@@ -29,7 +29,7 @@ const Footer = () => {
 						target='_blank'
 					>
 						<i
-							class='bi bi-linkedin'
+							className='bi bi-linkedin'
 							style={{ ...styles.iconStyle, ...styles.color }}
 						></i>
 					</Nav.Link>
