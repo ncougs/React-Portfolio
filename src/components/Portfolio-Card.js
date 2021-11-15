@@ -33,7 +33,7 @@ const PortfolioCard = ({ img, title, description, url }) => {
 					style={{ ...styles.background, ...styles.width, ...styles.border }}
 				>
 					<Card.Body>
-						<Card.Title>{title}</Card.Title>
+						<Card.Title className='fw-bold'>{title}</Card.Title>
 						<Card.Text>{description}</Card.Text>
 					</Card.Body>
 					<Card.Img

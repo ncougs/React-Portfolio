@@ -1,8 +1,11 @@
 import { useState } from 'react';
 import { Form, Button, Alert, Container } from 'react-bootstrap';
 
+import emailjs from 'emailjs-com';
+
 const Contact = () => {
 	const [messageSent, renderMessageSent] = useState(false);
+	const [errorMessage, renderErrorMessage] = useState(false);
 
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
@@ -12,9 +15,26 @@ const Contact = () => {
 		state(e.target.value);
 	};
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		renderMessageSent(true);
+
+		const templateParams = {
+			name,
+			email,
+			message,
+		};
+
+		const sendEmail = await emailjs.send(
+			'portfolio',
+			'template_kx2105y',
+			templateParams,
+			process.env.REACT_APP_email_UserID
+		);
+
+		sendEmail.status === 200
+			? renderMessageSent(true)
+			: renderErrorMessage(true);
+
 		setName('');
 		setEmail('');
 		setMessage('');
@@ -87,6 +107,14 @@ const Contact = () => {
 						style={{ ...styles.buttonColour, ...styles.border }}
 					>
 						Message Sent!
+					</Alert>
+				)}
+				{errorMessage && (
+					<Alert
+						className='my-3 text-white'
+						style={{ ...styles.buttonColour, ...styles.border }}
+					>
+						Error sending email!
 					</Alert>
 				)}
 			</Container>
